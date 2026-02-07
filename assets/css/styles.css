@@ -1,0 +1,600 @@
+/* ─── Fondo de la página ─── */
+body {
+    background: #1a1a2e;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #e0e0e0;
+}
+
+/* ─── Card principal ─── */
+.card-picker {
+    width: 100%;
+    max-width: 450px;
+    background: #16213e;
+    border: none;
+    border-radius: 18px;
+    color: #e0e0e0;
+}
+
+.card-picker .card-header {
+    background: #0f3460;
+    border-radius: 18px 18px 0 0;
+    border-bottom: 1px solid #1a4a7a;
+    padding: 1rem;
+    color: #fff;
+}
+
+/* ─── Previsualización de color ─── */
+.color-preview {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+    background-color: #000000;
+    border: 3px solid #2a2a4a;
+    transition: background-color 0.15s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* ─── Badge del código Hex ─── */
+.badge-hex {
+    background: #0f3460;
+    color: #fff;
+    border: 1px solid #2a5a8a;
+    padding: 0.4em 0.85em;
+    border-radius: 8px;
+    letter-spacing: 2px;
+    font-family: 'Consolas', 'Courier New', monospace;
+    transition: background 0.2s;
+}
+
+/* ─── Botón copiar ─── */
+.btn-copy {
+    background: #0f3460;
+    color: #7ec8e3;
+    border: 1px solid #2a5a8a;
+    border-radius: 8px;
+    padding: 0.35em 0.7em;
+    font-size: 0.82rem;
+    transition: background 0.2s, color 0.2s;
+    cursor: pointer;
+}
+
+.btn-copy:hover {
+    background: #1a5276;
+    color: #fff;
+}
+
+.btn-copy.copied {
+    background: #1e8449;
+    color: #fff;
+    border-color: #1e8449;
+}
+
+/* ─── Texto rgb(...) ─── */
+#rgb-text {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 0.95rem;
+    color: #7ec8e3 !important;
+}
+
+/* ─── Color Picker HTML5 ─── */
+.color-picker {
+    width: 80px;
+    height: 80px;
+    border: 3px solid #2a5a8a;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.3s;
+    background: transparent;
+}
+
+.color-picker:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(126, 200, 227, 0.5);
+}
+
+.color-picker::-webkit-color-swatch-wrapper {
+    padding: 0;
+    border-radius: 9px;
+}
+
+.color-picker::-webkit-color-swatch {
+    border: none;
+    border-radius: 9px;
+}
+
+.color-picker::-moz-color-swatch {
+    border: none;
+    border-radius: 9px;
+}
+
+/* ─── Etiquetas de los sliders ─── */
+.label-red  { color: #e74c3c; }
+.label-green { color: #2ecc71; }
+.label-blue  { color: #3498db; }
+
+/* ─── Inputs numéricos ─── */
+.input-value {
+    width: 70px;
+    text-align: center;
+    background: #0f3460;
+    color: #fff;
+    border: 1px solid #2a5a8a;
+    border-radius: 6px;
+    padding: 0.3rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.input-value:focus {
+    background: #1a5276;
+    border-color: #3a7aa8;
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(58, 122, 168, 0.3);
+    color: #fff;
+}
+
+/* Eliminar flechas de input number en Chrome, Safari, Edge */
+.input-value::-webkit-outer-spin-button,
+.input-value::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Eliminar flechas de input number en Firefox */
+.input-value[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* ─── Personalización de los sliders (Chrome / Safari) ─── */
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 10px;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    cursor: pointer;
+    border: 3px solid #16213e;
+    transition: transform 0.15s;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+}
+
+/* ─── Firefox ─── */
+input[type="range"]::-moz-range-thumb {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    cursor: pointer;
+    border: 3px solid #16213e;
+}
+
+/* ─── Colores de las barras ─── */
+.slider-red {
+    background: linear-gradient(to right, #000000, #ff0000);
+}
+
+.slider-green {
+    background: linear-gradient(to right, #000000, #00ff00);
+}
+
+.slider-blue {
+    background: linear-gradient(to right, #000000, #0000ff);
+}
+
+/* ─── Botón rein/* ═══════════════════════════════════════════════════════════
+   ESTILOS GENERALES
+   ═══════════════════════════════════════════════════════════ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   NAVBAR
+   ═══════════════════════════════════════════════════════════ */
+
+.navbar-custom {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.navbar-brand {
+    color: #667eea !important;
+    font-size: 1.4rem;
+    transition: transform 0.3s;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.05);
+}
+
+.nav-link {
+    color: #555 !important;
+    font-weight: 500;
+    transition: color 0.3s;
+    margin: 0 0.5rem;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #667eea !important;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   CARDS MODERNAS
+   ═══════════════════════════════════════════════════════════ */
+
+.card-modern {
+    border: none;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-modern:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+.card-header-custom {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1.2rem 1.5rem;
+    border: none;
+}
+
+.card-header-custom h5 {
+    margin: 0;
+    font-weight: 600;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   PREVISUALIZACIÓN DEL COLOR
+   ═══════════════════════════════════════════════════════════ */
+
+.color-preview-large {
+    width: 220px;
+    height: 220px;
+    background-color: #000000;
+    border: 5px solid #f0f0f0;
+    transition: all 0.3s ease;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   BADGE Y CÓDIGO HEX
+   ═══════════════════════════════════════════════════════════ */
+
+.badge-hex-large {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border-radius: 30px;
+    letter-spacing: 3px;
+    font-family: 'Courier New', monospace;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.btn-copy-modern {
+    background: white;
+    border: 2px solid #667eea;
+    color: #667eea;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    font-size: 1.2rem;
+}
+
+.btn-copy-modern:hover {
+    background: #667eea;
+    color: white;
+    transform: rotate(360deg);
+}
+
+.btn-copy-modern.copied {
+    background: #10b981;
+    border-color: #10b981;
+    color: white;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   TEXTO RGB
+   ═══════════════════════════════════════════════════════════ */
+
+.rgb-text-large {
+    font-family: 'Courier New', monospace;
+    font-size: 1.1rem;
+    color: #667eea;
+    font-weight: 600;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   COLOR PICKER HTML5
+   ═══════════════════════════════════════════════════════════ */
+
+.color-picker-large {
+    width: 100px;
+    height: 100px;
+    border: 4px solid #667eea;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+}
+
+.color-picker-large:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px rgba(102, 126, 234, 0.5);
+}
+
+.color-picker-large::-webkit-color-swatch-wrapper {
+    padding: 0;
+    border-radius: 50%;
+}
+
+.color-picker-large::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
+}
+
+.color-picker-large::-moz-color-swatch {
+    border: none;
+    border-radius: 50%;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   CONTROLES RGB
+   ═══════════════════════════════════════════════════════════ */
+
+.control-group {
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 15px;
+    transition: all 0.3s;
+}
+
+.control-group:hover {
+    background: #f0f1f3;
+    transform: translateX(5px);
+}
+
+/* Labels de colores */
+.label-red-modern {
+    color: #ef4444;
+    font-size: 1.1rem;
+}
+
+.label-green-modern {
+    color: #10b981;
+    font-size: 1.1rem;
+}
+
+.label-blue-modern {
+    color: #3b82f6;
+    font-size: 1.1rem;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   INPUTS NUMÉRICOS
+   ═══════════════════════════════════════════════════════════ */
+
+.input-value-modern {
+    width: 80px;
+    text-align: center;
+    background: white;
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #667eea;
+    transition: all 0.3s;
+}
+
+.input-value-modern:focus {
+    background: white;
+    border-color: #667eea;
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+.input-value-modern::-webkit-outer-spin-button,
+.input-value-modern::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.input-value-modern[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   SLIDERS MODERNOS
+   ═══════════════════════════════════════════════════════════ */
+
+.slider-modern {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 12px;
+    border-radius: 6px;
+    outline: none;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.slider-modern::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    border: 3px solid #667eea;
+    transition: all 0.2s;
+}
+
+.slider-modern::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.slider-modern::-moz-range-thumb {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    border: 3px solid #667eea;
+}
+
+/* Gradientes de los sliders */
+.slider-red-modern {
+    background: linear-gradient(to right, #1a1a1a, #ef4444);
+}
+
+.slider-green-modern {
+    background: linear-gradient(to right, #1a1a1a, #10b981);
+}
+
+.slider-blue-modern {
+    background: linear-gradient(to right, #1a1a1a, #3b82f6);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   BOTÓN REINICIAR
+   ═══════════════════════════════════════════════════════════ */
+
+.btn-reset-modern {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.btn-reset-modern:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+.btn-reset-modern:active {
+    transform: translateY(0);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   FOOTER
+   ═══════════════════════════════════════════════════════════ */
+
+.footer-custom {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    margin-top: auto;
+}
+
+.footer-custom h6 {
+    color: #667eea;
+    font-weight: 600;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    justify-content: flex-end;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-size: 1.2rem;
+}
+
+.social-link:hover {
+    transform: translateY(-3px) rotate(360deg);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    color: white;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+    .color-preview-large {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .color-picker-large {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}iciar ─── */
+.btn-reset {
+    background: transparent;
+    color: #7ec8e3;
+    border: 1px solid #2a5a8a;
+    border-radius: 20px;
+    padding: 0.4em 1.2em;
+    font-size: 0.85rem;
+    transition: background 0.2s, color 0.2s;
+    cursor: pointer;
+}
+
+.btn-reset:hover {
+    background: #0f3460;
+    color: #fff;
+}
